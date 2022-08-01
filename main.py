@@ -33,8 +33,8 @@ def iegutsludinajumus():
     i += 1
     url = f"https://www.ss.lv/lv/real-estate/flats/today-2/page{i}.html"
     response = requests.get(url)
-    #if response.url!='https://www.ss.lv/lv/real-estate/flats/today-2/':
-    if i <4:
+    if response.url!='https://www.ss.lv/lv/real-estate/flats/today-2/':
+    #if i <4:
       page = urlopen(url)
       html = page.read().decode("utf-8")
       soup = BeautifulSoup(html, "html.parser")
